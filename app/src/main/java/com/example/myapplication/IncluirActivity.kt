@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_incluir.*
 
 class IncluirActivity : AppCompatActivity(),View.OnClickListener {
-
+ssss
     private lateinit var mViwModel: IncluirModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
