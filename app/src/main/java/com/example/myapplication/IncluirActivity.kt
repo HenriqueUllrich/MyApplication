@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -47,11 +48,13 @@ class IncluirActivity : AppCompatActivity(),View.OnClickListener {
             }else
                 dias = Dias.text.toString().toInt()
 
-                val hora= timePicker1.hour.toInt()
-                val minuto=timePicker1.minute.toInt()
+                val hora= timePicker1.hour.toString().toInt()
+                val minuto=timePicker1.minute.toString().toInt()
                 val dosagem = dosagem.text.toString()
-                val volume = number_picker.value.toInt()
+                val volume = number_picker.value.toString().toInt()
                 mViwModel.save(nome, dias, hora, minuto, dosagem, volume)
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
     }
