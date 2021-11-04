@@ -34,8 +34,7 @@ class repository private constructor(context: Context){
 
             )
 
-            // Linha única
-            // Cursor cursor = db.rawQuery("select * from Guest", null);
+
 
             // Faz a seleção
             val cursor = db.query(
@@ -60,8 +59,7 @@ class repository private constructor(context: Context){
                     list.add(guest)
                 }
 
-                // Como verificar se um valor é nulo
-                // cursor.isNull(cursor.getInt(cursor.getColumnIndex(DataBaseConstants.GUEST.COLUMNS.PRESENCE))
+
             }
 
             cursor?.close()

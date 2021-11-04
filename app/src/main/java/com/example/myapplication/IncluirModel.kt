@@ -13,6 +13,6 @@ class IncluirModel(application: Application): AndroidViewModel(application) {
     val saveguest: LiveData<Boolean> = mSaveGuest
     fun save(nome:String, dias: Int, hora: Int, minuto:Int,dosagem: String, volume:Int ){
            var guest = model(0,nome, dias, hora, minuto, dosagem, volume)
-            mrepository.save(guest)
+            mSaveGuest.value= mrepository.save(guest)
     }
 }
